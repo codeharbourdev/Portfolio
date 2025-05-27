@@ -13,6 +13,15 @@ body {
     user-select: none;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #854ce6;
+    border-radius: 10px;
+}
+
 /******************  navbar  **********************/
 .navbar {
     position: fixed;
@@ -200,10 +209,9 @@ body {
 /*******************  home section ****************************/
 #home {
     margin-top: 60px;
-    height: 650px;
+    height: min-content;
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 100px;
     border-top-left-radius: 200px;
     border-top: 1px solid #854ce6;
     border-bottom: 1px solid #854ce6;
@@ -215,6 +223,8 @@ body {
 .homecontentbox {
     height: 100%;
     width: 45%;
+    padding-top: 55px;
+    padding-bottom: 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -239,11 +249,11 @@ body {
 
 .btnbox {
     height: 40px;
-    width: 320px;
+    width: 100%;
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
 }
 
 #linkedinbtn {
@@ -271,7 +281,7 @@ body {
 
 .downloadbtn {
     height: 40px;
-    width: 170px;
+    width: 200px;
     border: 5px solid #854ce6;
     color: white;
     font-size: 18px;
@@ -317,15 +327,12 @@ body {
 
 /****************** responsive home section ******************/
 @media (max-width : 1400px) {
-    #home {
-        height: min-content;
-        width: 100%;
+    #home { 
         display: flex;
         flex-direction: column;
     }
 
     .homecontentbox {
-        height: 600px;
         width: 100%;
     }
     
@@ -341,8 +348,8 @@ body {
 
 @media (max-width : 750px) {
     #home {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -415,10 +422,9 @@ body {
 
 /*******************  about section ******************/
 #about {
-    height: 650px;
+    height: min-content;
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 100px;
     border-top-right-radius: 200px;
     border-top: 1px solid #854ce6;
     border-bottom-left-radius: 200px;
@@ -462,6 +468,7 @@ body {
     gap: 30px;
     align-items: start;
     justify-content: center;
+    padding: 20px;
 }
 
 .aboutcontentbox h2 {
@@ -524,7 +531,6 @@ body {
 /**********************  responsive about *************************/
 @media (max-width : 1400px) {
     #about {
-        height: min-content;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -536,7 +542,6 @@ body {
     }
 
     .aboutcontentbox {
-        height: 600px;
         width: 100%;
     }
     
@@ -551,8 +556,8 @@ body {
 
 @media (max-width : 750px) {
     #about {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -572,7 +577,6 @@ body {
     }
 
     .aboutcontentbox {
-        height: 650px;
         width: 100%;
     }
 }
@@ -603,10 +607,9 @@ body {
 
 /***********************  skill section ***********************/
 #skill {
-    height: 550px;
+    height: min-content;
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 60px 100px;
     border-top-left-radius: 200px;
     border-top: 1px solid #854ce6;
     border-bottom-right-radius: 200px;
@@ -614,13 +617,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
 }
 
 /************************  skill heading *********************/
 .skill-heading {
-    height: 150px;
+    height: min-content;
     width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -628,47 +632,52 @@ body {
 }
 
 .skill-heading h1 {
-    font-size: 50px;
+    font-size: 70px;
     color: white;
 }
 
 .skill-heading p {
-    width: 100%;
+    width: 95%;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
 }
 
 /***********************  skill container ********************/
 .skill-container {
-    height: 300px;
+    height: min-content;
     width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .skilldiv {
-    height: 250px;
+    height: min-content;
     width: 500px;
+    padding: 50px;
     border: 2px solid #854ce6;
     border-radius: 10px;
     box-shadow: 0px 0px 2px #854ce6;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 50px;
 }
 
 .capsule {
     height: 50px;
-    width: 170px;
+    width: min-content;
+    padding: 0 10px;
     border: 5px solid #854ce6;
     background-color: #854ce6;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 15px;
 }
 
 .capsule:hover {
@@ -694,37 +703,32 @@ body {
 /**************** responsive skill ************************/
 @media (max-width : 1400px) {
     #skill {
-        height: min-content;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 30px;
-        padding-top: 50px;
-        padding-bottom: 50px;
     }
 
     .skill-container {
-        height: 900px;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        gap: 50px;
     }
 }
 
 @media (max-width : 750px) {
     #skill {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
 @media (max-width : 600px) {
     .skilldiv {
-        height: 400px;
-        width: 300px;
+        width: 95%;
         border-radius: 10px;
     }
 }
@@ -739,10 +743,7 @@ body {
 #projects {
     height: min-content;
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 100px;
     border-top-right-radius: 200px;
     border-top: 1px solid #854ce6;
     border-bottom-left-radius: 200px;
@@ -750,13 +751,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
 }
 
 /************************  projects heading *********************/
 .projects-heading {
-    height: 150px;
+    height: min-content;
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -769,9 +771,9 @@ body {
 }
 
 .projects-heading p {
-    width: 100%;
+    width: 95%;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
 }
 
@@ -784,11 +786,13 @@ body {
     align-items: center;
     justify-content: center;
     gap: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .projectsdiv {
-    height: 350px;
-    width: 300px;
+    height: min-content;
+    width: 280px;
     border: 5px solid #854ce6;
     border-radius: 5px;
     background-color: #854ce6;
@@ -816,10 +820,9 @@ body {
 }
 
 .project-para {
-    height: 130px;
+    height: min-content;
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 10px;
     font-size: 16px;
     font-weight: 500;
 }
@@ -830,7 +833,8 @@ body {
 }
 
 .project-btnbox {
-    height: 52px;
+    height: min-content;
+    padding: 10px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -838,11 +842,13 @@ body {
 
 .code {
     height: 30px;
-    width: 100px;
+    width: min-content;
     border: 5px solid #0f111a;
     background-color: #0f111a;
     border-radius: 5px;
     display: flex;
+    white-space: nowrap;
+    padding: 0 10px;
     align-items: center;
     justify-content: center;
 }
@@ -859,11 +865,13 @@ body {
 
 .live {
     height: 30px;
-    width: 100px;
+    width: min-content;
     border: 5px solid #0f111a;
     background-color: #0f111a;
     border-radius: 5px;
     display: flex;
+    white-space: nowrap;
+    padding: 0 10px;
     align-items: center;
     justify-content: center;
 }
@@ -885,25 +893,14 @@ body {
     }
 
     .projects-container {
-        height: min-content;
         width: 100%;
     }
 }
 
-@media (max-width : 750px) {
+@media (max-width : 800px) {
     #projects {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-@media (max-width : 400px) {
-    .projects-heading p {
-        font-size: 16px;
-    }
-
-    .project-para {
-        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -911,10 +908,7 @@ body {
 #education {
     height: min-content;
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 100px;
     border-top-left-radius: 200px;
     border-top: 1px solid #854ce6;
     border-bottom-right-radius: 200px;
@@ -922,13 +916,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
 }
 
 /************************  education heading *********************/
 .education-heading {
-    height: 200px;
+    height: min-content;
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -941,9 +936,9 @@ body {
 }
 
 .education-heading p {
-    width: 100%;
+    width: 95%;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
 }
 
@@ -951,8 +946,8 @@ body {
 .education-container {
     height: min-content;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1000,10 +995,10 @@ body {
     }
 }
 
-@media (max-width : 750px) {
+@media (max-width : 800px) {
     #education {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -1011,20 +1006,13 @@ body {
     .education-heading h1 {
         font-size: 40px;
     }
-
-    .education-heading p {
-        font-size: 16px;
-    }
 }
 
 /***********************  contact section  ********************/
 #contact {
     height: min-content;
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 100px;
     border-top-right-radius: 200px;
     border-top: 1px solid #854ce6;
     border-bottom-left-radius: 200px;
@@ -1032,13 +1020,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
 }
 
 /************************  contact heading *********************/
 .contact-heading {
-    height: 180px;
+    height: min-content;
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1051,18 +1040,18 @@ body {
 }
 
 .contact-heading p {
-    width: 100%;
+    width: 95%;
     text-align: center;
-    font-size: 18px;
+    font-size: 19px;
     color: white;
 }
 
 /***********************  contact container ********************/
 .contact-container {
-    height: 400px;
+    height: min-content;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1181,26 +1170,14 @@ body {
 }
 
 /**************** responsive contact ************************/
-@media (max-width : 750px) {
+@media (max-width : 800px) {
     #contact {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .contact-heading h1 {
-        font-size: 35px;
-    }
-}
-
-@media (max-width : 650px) {
     .contactdiv {
         width: 100%;
-    }
-}
- 
-@media (max-width : 400px) {
-    .contact-heading p {
-        font-size: 16px;
     }
 }
 
@@ -1208,10 +1185,7 @@ body {
 #footer {
     height: min-content;
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 150px;
     border-top-left-radius: 200px;
     border-top: 1px solid #854ce6;
     border-bottom-right-radius: 200px;
@@ -1224,16 +1198,18 @@ body {
 }
 
 .footerdiv {
-    height: 200px;
-    width: 200px;
+    height: min-content;
+    width: 250px;
     border: 5px solid #854ce6;
     background-color: #854ce6;
     border-radius: 5px;
     display: flex;
+    white-space: nowrap;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 5px;
-    padding: 5px;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .footerdiv:hover {
@@ -1244,13 +1220,14 @@ body {
 /*******************  footer link box ***************/
 .footerlogo {
     height: 40px;
-    width: 100%;
+    width: min-content;
     background-color: #0f111a;
     border-radius: 3px;
     box-shadow: 0px 0px 2px black;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .footerlogo p {
@@ -1264,7 +1241,8 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
 }
 
 .footerlink a {
@@ -1316,15 +1294,17 @@ body {
 /******************  responsive footer ****************/
 @media (max-width : 550px) {
     #footer {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
 /*******************  footer 1  *******************/
 .footer1 {
-    height: 100px;
+    height: min-content;
     width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-top-right-radius: 200px;
     border-top: 1px solid #854ce6;
     color: white;
@@ -1336,7 +1316,8 @@ body {
 
 .footer1 h1 {
     font-size: 15px;
-    width: 90%;
+    font-family: sans-serif;
+    width: 80%;
     text-align: center;
 }
 
