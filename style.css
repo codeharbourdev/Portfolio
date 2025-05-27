@@ -1339,3 +1339,9 @@ body {
     width: 90%;
     text-align: center;
 }
+
+/* Instagram Layout Glitch Fix */
+.fix-glitch {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
