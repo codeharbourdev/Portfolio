@@ -290,6 +290,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #854ce6;
     border-radius: 3px;
     display: flex;
+    white-space: nowrap;
     align-items: center;
     justify-content: center;
 }
